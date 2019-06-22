@@ -1,0 +1,84 @@
+<!--If this web page is visited without html parameters, it will select a random
+    subject code to use. If it is visited with an ?id=XXX, it will
+    use XXX as the participant code.
+
+  -->
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Welcome to the Study</title>
+</head>
+<body bgcolor="white" text="#000000" link="#204A4E" vlink="#204A4E" alink="#204A4E" style="width: 960px">
+
+  <h1> Medibot study</h1>
+
+
+ INTRODUCTORY TEXT HERE.
+
+<p>
+<p id="demo2"></p>
+
+
+</body>
+<script>
+  //Add -1 to the dummy code to preserve condition
+  var dummy = (10000000+Math.ceil(Math.random()*1000000)) ;
+  var tmpParam = location.search.split('id=')[1]
+  var myParam = tmpParam ? tmpParam :  dummy;  //use a random code if an ID is not fed in.
+
+  var text = "Participant code: " + myParam ;
+
+
+  var rn = Math.floor(Math.random() * 3);
+  var switcher = rn;
+  var f1 = "https://docs.google.com/forms/d/e/1FAIpQLSdGEZ4_y0w5H6C-EkcbIA9YG8m5DHBJG-ti3_C7xCojewNHNQ/viewform?usp=pp_url&entry.463871173="+ myParam;
+  var f2 = "https://docs.google.com/forms/d/e/1FAIpQLSf8meRgG_4K4zJIEsdlvoX9wOSvc7MZfZ3kSrmFmowilhmdgA/viewform?usp=pp_url&entry.262817473="+ myParam;
+  var f3 = "https://docs.google.com/forms/d/e/1FAIpQLSeri6IxeTbr22seCmsqD5siSJXa4oAThLgYCxYU3folSEKkBQ/viewform?usp=pp_url&entry.920778255="+ myParam;
+
+
+
+  var filename = ""
+  switch(rn)
+ {
+   case 0:
+    filename = f1;
+    break;
+   case 1:
+    filename = f2;
+    break;
+   case 2:
+   default:
+    filename = f3;
+    break;
+  }
+
+ text = "<h3>Follow this link to take begin the study:  </h3><a target='_blank' href="+  filename + "> " + " Click here</a></p> You must complete and submit the survey within 24 hours to receive credit.";
+
+
+  document.getElementById("demo2").innerHTML = text
+
+</script>
+
+
+
+</html>
