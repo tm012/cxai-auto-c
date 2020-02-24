@@ -50,7 +50,7 @@
   var text = "Participant code: " + myParam ;
 
 
-  var rn = Math.floor(Math.random() * 3);
+  var rn = Math.floor(Math.random() * 4);
   var switcher = rn;
   var f1 = "https://docs.google.com/forms/d/e/1FAIpQLSdb0y4dutx470nTq0YbzzazQHwFMIbU0gu-LYBuHQvimrMeag/viewform?usp=pp_url&entry.920778255="+ myParam;
   var f2 = "https://docs.google.com/forms/d/e/1FAIpQLSeri6IxeTbr22seCmsqD5siSJXa4oAThLgYCxYU3folSEKkBQ/viewform?usp=pp_url&entry.920778255="+ myParam;
@@ -70,8 +70,11 @@
    case 2:
       filename = f3;
       break;
+   case 3:
+      filename = f4;
+      break;
    default:
-    filename = f4;
+      filename = f4;
     break;
   }
 
