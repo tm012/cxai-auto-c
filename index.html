@@ -41,7 +41,16 @@
 
 
 </body>
+
 <script>
+  
+  function getRandomNumberBetween(min,max){
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+</script>
+<script>
+
+
   //Add -1 to the dummy code to preserve condition
   var dummy = (10000000+Math.ceil(Math.random()*1000000)) ;
   var tmpParam = location.search.split('id=')[1]
@@ -50,8 +59,11 @@
   var text = "Participant code: " + myParam ;
 
 
-  var rn = Math.floor(Math.random() * 8);
+  var rn = getRandomNumberBetween(1,8)
+  //Math.floor(Math.random() * 8);
   var switcher = rn;
+
+
   var f1 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_73bZXsDSKM1rDw2";
   var f2 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_3giSr4UITHXt8bA";
   var f3 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_cFIrRWaHvG7KBeu";
@@ -97,6 +109,11 @@
       filename = f8;
       //f4;
       break;
+
+   case 8:
+    filename = f8;
+    //f1;
+    break;
    default:
       filename = f1;
     break;
