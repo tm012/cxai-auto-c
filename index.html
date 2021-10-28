@@ -50,33 +50,55 @@
   var text = "Participant code: " + myParam ;
 
 
-  var rn = Math.floor(Math.random() * 4);
+  var rn = Math.floor(Math.random() * 8);
   var switcher = rn;
-  var f1 = "https://docs.google.com/forms/d/e/1FAIpQLScDXh9kYC9zcGs66CMLNrNNGe4Inx91LbX97Aw3_hdxghG1mQ/viewform?usp=pp_url&entry.920778255="+ myParam;
-  var f2 = "https://docs.google.com/forms/d/e/1FAIpQLSc66nwnHUS-J8XxTFNiVrvqfXBg5aLYzxnD0dRvIe-z3gORAQ/viewform?usp=pp_url&entry.920778255="+ myParam;
-  var f3 = "https://docs.google.com/forms/d/e/1FAIpQLSfbvUMi1ZAP09cxhSXbkQOnjmZtP8MVAFHPcGnHTpbAaRPEjA/viewform?usp=pp_url&entry.920778255="+ myParam;
-   var f4 = "https://docs.google.com/forms/d/e/1FAIpQLScN7I0jGaBRqU3oBBICfV_0eYv9aYtLwM9vqNJt4_j3j9PDGw/viewform?usp=pp_url&entry.920778255="+ myParam;  
+  var f1 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_73bZXsDSKM1rDw2";
+  var f2 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_3giSr4UITHXt8bA";
+  var f3 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_cFIrRWaHvG7KBeu";
+   var f4 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_8HfDbInwRpTYo06";  
+    var f5 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_by2aMCNKjKVAXnE";  
+    var f6 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_bKL893SJ2z7Ts5o";  
+    var f7 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_0NECSgdEOB2jbPE";  
+    var f8 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_6Vx7nMhUl2VCMgm";
+
+    //"https://docs.google.com/forms/d/e/1FAIpQLScN7I0jGaBRqU3oBBICfV_0eYv9aYtLwM9vqNJt4_j3j9PDGw/viewform?usp=pp_url&entry.920778255="+ myParam;  
 
 
   var filename = ""
   switch(rn)
  {
    case 0:
-    filename = f3;
+    filename = f1;
     //f1;
     break;
    case 1:
-    filename = f3;
+    filename = f2;
     break;
    case 2:
       filename = f3;
       break;
    case 3:
-      filename = f3;
+      filename = f4;
+      //f4;
+      break;
+   case 4:
+      filename = f5;
+      //f4;
+      break;
+   case 5:
+      filename = f6;
+      //f4;
+      break;
+   case 6:
+      filename = f7;
+      //f4;
+      break;
+   case 7:
+      filename = f8;
       //f4;
       break;
    default:
-      filename = f3;
+      filename = f1;
     break;
   }
 
