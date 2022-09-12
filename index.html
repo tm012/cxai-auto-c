@@ -7,6 +7,12 @@
 
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
@@ -41,107 +47,116 @@
 
 <!-- <a href="/home/tauseef/Desktop/laravel_projects/cxai-auto/index_1.html">Visit W3Schools.com!</a> -->
 
+<div id ="enter_code" >
+<input type="text" placeholder="Write Participant ID" id="p_id" name="p_id" >
+<button type="button" class="btn btn-success p_id_done">Done</button>
+</div>
+<div style = "display: none;" id="navigation_bar">
+  <h3>Click the Button after you are DONE</h3>
+  <button type="button" class="btn btn-success complete_study">Done</button>
 
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/autopilot.html">#autopilot - autopilot Feature of Tesla</a><br>
 
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/in_road_items.html">#inRoadItems - Vehicles, Stationary Objects, Animals, etc.</a><br>
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/lane_maintenance.html">#laneMaintenance - Lane Management</a><br>
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/neighborhood.html">#neighborhood - Neighborhood or Residential Areas</a><br>
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/traffic_signals.html">#trafficSignals - Traffic Signals</a><br>
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/traffic_signs.html">#trafficSigns - Traffic Signs</a><br>
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/turning.html">#turning - Vehicle Turning </a><br>
-<a style="font-size: 30px" href="https://cxai-auto.herokuapp.com/sentry_mode.html">#sentryMode - sentry mode Feature of Tesla</a><br>
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/vehicle_warnings.html">#vehicleWarnings - In Vehicle Warnings </a><br>
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/vigilance.html">#vigilance - Driver's Vigilance</a><br>
-<a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/unexpected_stopping_slowing_down.html">#unexpectedStopping/SlowingDown - Unexpected Stopping/Slowing Down of the Vehicle</a><br>
+  <hr style=" border: 10px solid green;border-radius: 5px;">
+<h3>Topics</h3>
+  <a target="_blank" style="font-size: 30px" href="https://cxai-auto.herokuapp.com/autopilot.html">#autopilot - autopilot Feature of Tesla</a><br>
 
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/in_road_items.html">#inRoadItems - Vehicles, Stationary Objects, Animals, etc.</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/lane_maintenance.html">#laneMaintenance - Lane Management</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/neighborhood.html">#neighborhood - Neighborhood or Residential Areas</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/traffic_signals.html">#trafficSignals - Traffic Signals</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/traffic_signs.html">#trafficSigns - Traffic Signs</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/turning.html">#turning - Vehicle Turning </a><br>
+  <a style="font-size: 30px" href="https://cxai-auto.herokuapp.com/sentry_mode.html">#sentryMode - sentry mode Feature of Tesla</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/vehicle_warnings.html">#vehicleWarnings - In Vehicle Warnings </a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/vigilance.html">#vigilance - Driver's Vigilance</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/unexpected_stopping_slowing_down.html">#unexpectedStopping/SlowingDown - Unexpected Stopping/Slowing Down of the Vehicle</a><br>
+</div>
 </body>
 
+
+
 <script>
-  
-  function getRandomNumberBetween(min,max){
-    return Math.floor(Math.random()*(max-min+1)+min);
+  var p_id="";
+  $(function() {
+
+
+    p_id= localStorage.getItem('p_id');
+    if(p_id == null )
+    {
+// alert(localStorage.getItem('p_id'));
+      localStorage.setItem('p_id', "");
+      localStorage.setItem('autopilot', "0");
+      localStorage.setItem('inRoadItems', "0");
+      localStorage.setItem('laneMaintenance', "0");
+      localStorage.setItem('neighborhood', "0");
+      localStorage.setItem('trafficSignals', "0");
+      localStorage.setItem('trafficSigns', "0");
+      localStorage.setItem('turning', "0");
+      localStorage.setItem('sentryMode', "0");
+      localStorage.setItem('vehicleWarnings', "0");
+      localStorage.setItem('unexpectedStopping_SlowingDown', "0");
+       localStorage.setItem('vigilance', "0");
+
+       $("#enter_code").show();
+
+       $("#navigation_bar").hide();
+     }
+
+    
+});
+
+$(".p_id_done").click(function(){
+
+    p_id = localStorage.getItem('p_id');
+    //alert(p_id);
+    if($('#enter_code').is(':visible'))
+    {
+      //alert("dfd");
+      localStorage.setItem('p_id', $('#p_id').val());
+
+       $("#enter_code").hide();
+
+       $("#navigation_bar").show();
+   }
+   
+});
+
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
 }
-</script>
-<script>
+$(".complete_study").click(function(){
 
 
-  //Add -1 to the dummy code to preserve condition
-  var dummy = (10000000+Math.ceil(Math.random()*1000000)) ;
-  var tmpParam = location.search.split('id=')[1]
-  var myParam = tmpParam ? tmpParam :  dummy;  //use a random code if an ID is not fed in.
+  
+  download('test.txt', 'Hello world!\nHello world!');
 
-  var text = "Participant code: " + myParam ;
+  localStorage.removeItem('p_id');
+  localStorage.removeItem('autopilot');
+  localStorage.removeItem('inRoadItems');
+  localStorage.removeItem('laneMaintenance');
+  localStorage.removeItem('neighborhood');
+  localStorage.removeItem('trafficSignals');
+  localStorage.removeItem('trafficSigns');
+  localStorage.removeItem('turning');
+  localStorage.removeItem('sentryMode');
+  localStorage.removeItem('vehicleWarnings');
+  localStorage.removeItem('unexpectedStopping_SlowingDown');
+   localStorage.removeItem('vigilance');
 
+   $("#enter_code").show();
 
-  var rn = getRandomNumberBetween(1,3);
-  //Math.floor(Math.random() * 8);
-  var switcher = rn;
+   $("#navigation_bar").hide();
 
-
-  var f1 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_2r7osZh2OA11H5Y";
-  var f2 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_0lFUC5DkscHWaaO";
-  // var f3 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_cFIrRWaHvG7KBeu";
-  //  var f4 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_8HfDbInwRpTYo06";  
-  //   var f5 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_by2aMCNKjKVAXnE";  
-  //   var f6 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_bKL893SJ2z7Ts5o";  
-  //   var f7 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_0NECSgdEOB2jbPE";  
-  //   var f8 = "https://mtucls.iad1.qualtrics.com/jfe/form/SV_6Vx7nMhUl2VCMgm";
-
-    //"https://docs.google.com/forms/d/e/1FAIpQLScN7I0jGaBRqU3oBBICfV_0eYv9aYtLwM9vqNJt4_j3j9PDGw/viewform?usp=pp_url&entry.920778255="+ myParam;  
-
-
-  var filename = ""
-  switch(rn)
- {
-   case 0:
-    filename = f1;
-    //f1;
-    break;
-   case 1:
-    filename = f2;
-    break;
-   case 2:
-      filename = f1;
-      break;
-   // case 3:
-   //    filename = f3;
-   //    //f4;
-   //    break;
-   // case 4:
-   //    filename = f4;
-   //    //f4;
-   //    break;
-   // case 5:
-   //    filename = f5;
-   //    //f4;
-   //    break;
-   // case 6:
-   //    filename = f6;
-   //    //f4;
-   //    break;
-   // case 7:
-   //    filename = f7;
-   //    //f4;
-   //    break;
-
-   // case 8:
-   //  filename = f8;
-   //  //f1;
-   //  break;
-   default:
-      filename = f2;
-    break;
-  }
-
-
- text = "<h3>Follow this link to take begin the study:  </h3><a target='_blank' href="+  filename + '?id='+ myParam +"> " + " Click here</a></p> You must complete and submit the survey within 24 hours to receive credit.";
-
-
-  document.getElementById("demo2").innerHTML = text
-
+});
 </script>
 
 
-
-</html>

@@ -329,6 +329,34 @@
 
         </div>
     </section>
-   <hr style="border-top: 1px dashed black;">   
+   <hr style="border-top: 1px dashed black;"> 
+   <input type="hidden" class="Timer">  
   </body>
+
+
+   <script>
+    
+    var start = new Date;
+    $(function() {
+
+
+    });
+
+
+    setInterval(function() {
+      
+    $('.Timer').val((new Date - start) / 1000 );
+}, 1000);
+
+
+$(".btn-outline-warning").click(function(){
+    time = parseFloat(localStorage.getItem('trafficSigns'));
+    time = time + parseFloat($('.Timer').val());
+
+    localStorage.setItem('trafficSigns', time.toString());
+  });
+
+
+
+  </script>
 </html>
