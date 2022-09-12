@@ -81,6 +81,14 @@
 
 
     p_id= localStorage.getItem('p_id');
+
+    if(parseFloat(p_id) > 0){
+
+       $("#enter_code").show();
+
+       $("#navigation_bar").hide();
+
+    }
     if($('#enter_code').is(':visible'))
     {
 // alert(localStorage.getItem('p_id'));
