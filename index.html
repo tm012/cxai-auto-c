@@ -97,9 +97,9 @@
       localStorage.setItem('unexpectedStopping_SlowingDown', "0");
        localStorage.setItem('vigilance', "0");
 
-       $("#enter_code").show();
+       //$("#enter_code").show();
 
-       $("#navigation_bar").hide();
+       //$("#navigation_bar").hide();
      }
 
     
@@ -136,7 +136,9 @@ function download(filename, text) {
 $(".complete_study").click(function(){
 
 
+       $("#enter_code").show();
 
+       $("#navigation_bar").hide();
   download('test.txt', 'Hello world!\nHello world!');
 
   localStorage.removeItem('p_id');
