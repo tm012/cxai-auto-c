@@ -790,6 +790,8 @@
 
 $(".timer_btn").click(function(){
     time = parseFloat(localStorage.getItem('laneMaintenance'));
+
+    console.log(time);
     time = time + parseFloat($('.Timer').val());
 
     localStorage.setItem('laneMaintenance', time.toString());
