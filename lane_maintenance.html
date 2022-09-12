@@ -770,7 +770,7 @@
     </section>
    <hr style="border-top: 1px dashed black;">
 
-   <input  class="Timer"> 
+   <input  type="hidden" class="Timer"> 
   </body>
 
   <script>
@@ -791,7 +791,7 @@
 $(".timer_btn").click(function(){
     time = parseFloat(localStorage.getItem('laneMaintenance'));
 
-    console.log(time);
+    alert(time.toString());
     time = time + parseFloat($('.Timer').val());
 
     localStorage.setItem('laneMaintenance', time.toString());
