@@ -695,7 +695,7 @@
 
 
 $(".timer_btn").click(function(){
-    time = parseFloat(localStorage.getItem('autopilot'));
+    time = parseFloat(localStorage.getItem('inRoadItems'));
     time = time + parseFloat($('.Timer').val());
 
     localStorage.setItem('autopilot', time.toString());
