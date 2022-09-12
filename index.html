@@ -39,7 +39,9 @@
   <h1> CXAI Auto study</h1>
 
 
- Thanks for participating in this study. 
+ Thanks for participating in this study.
+
+ <h2>Please Use webpages' buttons, not browser</h2> 
  
  
 <p>
@@ -147,7 +149,23 @@ $(".complete_study").click(function(){
        $("#enter_code").show();
 
        $("#navigation_bar").hide();
-  download('test.txt', 'Hello world!\nHello world!');
+
+       var text =   "pID: "+localStorage.getItem('p_id')
+       +"\n"+
+  "autopilot: "+localStorage.getItem('autopilot')+"\n"+
+  "inRoadItems: "+localStorage.getItem('inRoadItems')+"\n"+
+  "laneMaintenance: "+localStorage.getItem('laneMaintenance')+"\n"+
+  "neighborhood: "+localStorage.getItem('neighborhood')+"\n"+
+  "trafficSignals: "+localStorage.getItem('trafficSignals')+"\n"+
+  "trafficSigns: "+localStorage.getItem('trafficSigns')+"\n"+
+  "turning: "+localStorage.getItem('turning')+"\n"+
+  "sentryMode: "+localStorage.getItem('sentryMode')+"\n"+
+  "vehicleWarnings: "+localStorage.getItem('vehicleWarnings')+"\n"+
+  "unexpectedStopping_SlowingDown: "+localStorage.getItem('unexpectedStopping_SlowingDown')+"\n"+
+   "vigilance: "+localStorage.getItem('vigilance')+"\n";
+   var file_name = localStorage.getItem('p_id') + '.txt';
+   download(file_name, text);
+ // download('test.txt', 'Hello world!\nHello world!');
 
   localStorage.removeItem('p_id');
   localStorage.removeItem('autopilot');
