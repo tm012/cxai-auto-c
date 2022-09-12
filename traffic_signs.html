@@ -351,6 +351,7 @@
 
 $(".timer_btn").click(function(){
     time = parseFloat(localStorage.getItem('trafficSigns'));
+    if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
     localStorage.setItem('trafficSigns', time.toString());

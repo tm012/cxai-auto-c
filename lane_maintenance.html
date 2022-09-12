@@ -790,6 +790,7 @@
 
 $(".timer_btn").click(function(){
     time = parseFloat(localStorage.getItem('laneMaintenance'));
+    if(isNaN(time)){time = 0;}
 
     //alert(time.toString());
     time = time + parseFloat($('.Timer').val());

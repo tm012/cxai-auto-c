@@ -612,6 +612,7 @@
 
 $(".timer_btn").click(function(){
     time = parseFloat(localStorage.getItem('turning'));
+    if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
     localStorage.setItem('turning', time.toString());

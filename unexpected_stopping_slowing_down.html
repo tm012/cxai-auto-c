@@ -802,6 +802,7 @@
 
 $(".timer_btn").click(function(){
     time = parseFloat(localStorage.getItem('unexpectedStopping_SlowingDown'));
+    if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
     localStorage.setItem('unexpectedStopping_SlowingDown', time.toString());

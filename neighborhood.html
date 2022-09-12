@@ -408,6 +408,7 @@
 
 $(".timer_btn").click(function(){
     time = parseFloat(localStorage.getItem('neighborhood'));
+    if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
     localStorage.setItem('neighborhood', time.toString());
