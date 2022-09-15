@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>#NewRelease</title>
+  </head>
+  <body>
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<section class="expertise-wrapper section-wrapper gray-bg">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-1">
+
+                <a href= "https://cxai-auto.herokuapp.com/" type="button" class="timer_btn btn btn-outline-warning">Back Home</a>
+              </div>
+              <div class="col-md-11">
+              </div>
+            </div>
+          </div>
+
+</section>
+<section class="expertise-wrapper section-wrapper gray-bg">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="section-title">
+                  <p style="font-size: 20px">25. According to Elon Musk, Tesla is planning to release FSD Beta 10.69.2 by the end of the week. Elon explained that the next and possibly final 10.69 version still needs minor improvements before releasing to all beta testers. He said that v10.69.2 features a relatively small number of code changes that will significantly affect the self-driving software. Once these minor code changes are made, Tesla will release FSD Beta version 10.69.2 to all 100,000 beta testers. This upcoming version of Tesla’s 10.69 updates will improve upon the previous v10.69.1.1.
+Tesla released FSD Beta v10.69.1.1 to about 10,000 beta testers last week. The update introduced a few new bug fixes to the 10.69 release which is making good progress.
+
+The FSD Beta 10.69 release notes highlight better turns and smoother driving. The release is making big improvements to unprotected left turns, or “Chuck Cook Style” unprotected left turns. Additionally, Tesla improved the smoothness of protected right turns.
+
+Tesla made other improvements to make the driving experience smoother, which are listed below.
+
+Improved overall driving smoothness, without sacrificing latency, through better modeling of system and actuation latency in trajectory planning.
+Trajectory planner now independently accounts for latency from steering commands to actual steering actuation, as well as acceleration and brake commands to actuation.
+This results in a trajectory that is a more accurate model of how the vehicle would drive.
+This allows better downstream controller tracking and smoothness while also allowing a more accurate response during harsh maneuvers.
+Reduced false slowdowns near crosswalks. This was done with improved understanding of pedestrian and bicyclist intent based on their motion.
+Enabled creeping for visibility at any intersection where objects might cross ego’s path, regardless of presence of traffic controls.
+Improved accuracy of stopping position in critical scenarios with crossing objects, by allowing dynamic resolution in trajectory optimization to focus more on areas where finer control is essential.
+Reduced latency when starting from a stop by accounting for lead vehicle jerk.
+ 
+</p>
+                </div>
+              </div>
+            </div>
+            <!-- .row -->
+
+          
+            <div class="row">
+              <div class="col-md-12">
+
+                <a class= "timer_btn" style="font-size: 20px" href="https://cxai-auto.herokuapp.com/NewRelease.html">#NewRelease</a>
+                
+
+              </div>
+              
+            </div>
+         
+
+           
+    </section>
+    <hr style="border-top: 1px dashed black;">
+   <hr style="border-top: 1px dashed black;">
+    <input type="hidden" class="Timer">
+  </body>
+
+
+  <script>
+    
+    var start = new Date;
+    $(function() {
+
+
+    });
+
+
+    setInterval(function() {
+      
+    $('.Timer').val((new Date - start) / 1000 );
+}, 1000);
+
+
+$(".timer_btn").click(function(){
+    time = parseFloat(localStorage.getItem('trafficSignals'));
+    if(isNaN(time)){time = 0;}
+    time = time + parseFloat($('.Timer').val());
+
+    localStorage.setItem('trafficSignals', time.toString());
+  });
+
+
+
+  </script>
+</html>

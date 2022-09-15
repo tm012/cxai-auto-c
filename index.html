@@ -61,18 +61,16 @@
 
   <hr style=" border: 10px solid green;border-radius: 5px;">
 <h3>Topics</h3>
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/autopilot.html">#autopilot - autopilot Feature of Tesla</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/AICar.html">#AICar - Technical Features of Tesla</a><br>
 
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/in_road_items.html">#inRoadItems - Vehicles, Stationary Objects, Animals, etc.</a><br>
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/lane_maintenance.html">#laneMaintenance - Lane Management</a><br>
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/neighborhood.html">#neighborhood - Neighborhood or Residential Areas</a><br>
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/traffic_signals.html">#trafficSignals - Traffic Signals</a><br>
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/traffic_signs.html">#trafficSigns - Traffic Signs</a><br>
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/turning.html">#turning - Vehicle Turning </a><br>
-  <a style="font-size: 30px" href="https://cxai-auto.herokuapp.com/sentry_mode.html">#sentryMode - sentry mode Feature of Tesla</a><br>
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/vehicle_warnings.html">#vehicleWarnings - In Vehicle Warnings </a><br>
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/vigilance.html">#vigilance - Driver's Vigilance</a><br>
-  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/unexpected_stopping_slowing_down.html">#unexpectedStopping/SlowingDown - Unexpected Stopping/Slowing Down of the Vehicle</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/Autopilot.html">#Autopilot - Autopilot Feature of Tesla</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/BetaTesters.html">#BetaTesters - FSD Testers</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/Issues.html">#Issues - Issues of Tesla Car's Mainly FSD</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/Legals.html">#Legals - Legal Aspects of Tesla's Tech.</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/NewRelease.html">#NewRelease - Releases of FSD Version</a><br>
+  <a  style="font-size: 30px" href="https://cxai-auto.herokuapp.com/Price.html">#Price - Price of Tesla Techs. </a><br>
+  <a style="font-size: 30px" href="https://cxai-auto.herokuapp.com/Supercharger.html">#Supercharger - Charging of Tesla</a><br>
+
 </div>
 </body>
 
@@ -96,17 +94,17 @@
     {
 // alert(localStorage.getItem('p_id'));
       localStorage.setItem('p_id', "0");
-      localStorage.setItem('autopilot', "0");
-      localStorage.setItem('inRoadItems', "0");
-      localStorage.setItem('laneMaintenance', "0");
-      localStorage.setItem('neighborhood', "0");
-      localStorage.setItem('trafficSignals', "0");
-      localStorage.setItem('trafficSigns', "0");
-      localStorage.setItem('turning', "0");
-      localStorage.setItem('sentryMode', "0");
-      localStorage.setItem('vehicleWarnings', "0");
-      localStorage.setItem('unexpectedStopping_SlowingDown', "0");
-       localStorage.setItem('vigilance', "0");
+      localStorage.setItem('AICar', "0");
+      localStorage.setItem('Autopilot', "0");
+      localStorage.setItem('BetaTesters', "0");
+      localStorage.setItem('Issues', "0");
+      localStorage.setItem('Legals', "0");
+      localStorage.setItem('NewRelease', "0");
+      localStorage.setItem('Price', "0");
+      localStorage.setItem('Supercharger', "0");
+     // localStorage.setItem('vehicleWarnings', "0");
+     // localStorage.setItem('unexpectedStopping_SlowingDown', "0");
+       //localStorage.setItem('vigilance', "0");
 
        //$("#enter_code").show();
 
@@ -114,6 +112,7 @@
      }
 
     
+
 });
 
 $(".p_id_done").click(function(){
@@ -153,33 +152,29 @@ $(".complete_study").click(function(){
 
        var text =   "pID: "+localStorage.getItem('p_id')
        +"\n"+
-  "autopilot: "+localStorage.getItem('autopilot')+"\n"+
-  "inRoadItems: "+localStorage.getItem('inRoadItems')+"\n"+
-  "laneMaintenance: "+localStorage.getItem('laneMaintenance')+"\n"+
-  "neighborhood: "+localStorage.getItem('neighborhood')+"\n"+
-  "trafficSignals: "+localStorage.getItem('trafficSignals')+"\n"+
-  "trafficSigns: "+localStorage.getItem('trafficSigns')+"\n"+
-  "turning: "+localStorage.getItem('turning')+"\n"+
-  "sentryMode: "+localStorage.getItem('sentryMode')+"\n"+
-  "vehicleWarnings: "+localStorage.getItem('vehicleWarnings')+"\n"+
-  "unexpectedStopping_SlowingDown: "+localStorage.getItem('unexpectedStopping_SlowingDown')+"\n"+
-   "vigilance: "+localStorage.getItem('vigilance')+"\n";
+  "AICar: "+localStorage.getItem('AICar')+"\n"+
+  "Autopilot: "+localStorage.getItem('Autopilot')+"\n"+
+  "BetaTesters: "+localStorage.getItem('BetaTesters')+"\n"+
+  "Issues: "+localStorage.getItem('Issues')+"\n"+
+  "Legals: "+localStorage.getItem('Legals')+"\n"+
+  "NewRelease: "+localStorage.getItem('NewRelease')+"\n"+
+  "Price: "+localStorage.getItem('Price')+"\n"+
+  "Supercharger: "+localStorage.getItem('Supercharger')+"\n";
    var file_name = localStorage.getItem('p_id') + '.txt';
    download(file_name, text);
  // download('test.txt', 'Hello world!\nHello world!');
 
   localStorage.removeItem('p_id');
-  localStorage.removeItem('autopilot');
-  localStorage.removeItem('inRoadItems');
-  localStorage.removeItem('laneMaintenance');
-  localStorage.removeItem('neighborhood');
-  localStorage.removeItem('trafficSignals');
-  localStorage.removeItem('trafficSigns');
-  localStorage.removeItem('turning');
-  localStorage.removeItem('sentryMode');
-  localStorage.removeItem('vehicleWarnings');
-  localStorage.removeItem('unexpectedStopping_SlowingDown');
-   localStorage.removeItem('vigilance');
+  localStorage.removeItem('AICar');
+  localStorage.removeItem('Autopilot');
+  localStorage.removeItem('BetaTesters');
+  localStorage.removeItem('Issues');
+  localStorage.removeItem('Legals');
+  localStorage.removeItem('NewRelease');
+  localStorage.removeItem('Price');
+  localStorage.removeItem('Supercharger');
+//  localStorage.removeItem('unexpectedStopping_SlowingDown');
+  // localStorage.removeItem('vigilance');
 
    $("#enter_code").show();
 
@@ -189,3 +184,4 @@ $(".complete_study").click(function(){
 </script>
 
 
+ 
