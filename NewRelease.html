@@ -95,11 +95,11 @@ Reduced latency when starting from a stop by accounting for lead vehicle jerk.
 
 
 $(".timer_btn").click(function(){
-    time = parseFloat(localStorage.getItem('trafficSignals'));
+    time = parseFloat(localStorage.getItem('NewRelease'));
     if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
-    localStorage.setItem('trafficSignals', time.toString());
+    localStorage.setItem('NewRelease', time.toString());
   });
 
 

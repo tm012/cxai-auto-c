@@ -401,11 +401,11 @@ Musk pointed out that the Tesla’s free cash flow generation has been trending 
 
 
 $(".timer_btn").click(function(){
-    time = parseFloat(localStorage.getItem('autopilot'));
+    time = parseFloat(localStorage.getItem('AICar'));
     if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
-    localStorage.setItem('autopilot', time.toString());
+    localStorage.setItem('AICar', time.toString());
   });
 
 

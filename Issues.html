@@ -235,11 +235,11 @@ The problem might have already been fixed in the latest update. Recently, Elon M
 
 
 $(".timer_btn").click(function(){
-    time = parseFloat(localStorage.getItem('neighborhood'));
+    time = parseFloat(localStorage.getItem('Issues'));
     if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
-    localStorage.setItem('neighborhood', time.toString());
+    localStorage.setItem('Issues', time.toString());
   });
 
 

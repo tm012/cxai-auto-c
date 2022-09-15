@@ -163,13 +163,13 @@ Tesla started adding to its FSD Beta Program on Monday, June 6. A few Tesla owne
 
 
 $(".timer_btn").click(function(){
-    time = parseFloat(localStorage.getItem('laneMaintenance'));
+    time = parseFloat(localStorage.getItem('BetaTesters'));
     if(isNaN(time)){time = 0;}
 
     //alert(time.toString());
     time = time + parseFloat($('.Timer').val());
 
-    localStorage.setItem('laneMaintenance', time.toString());
+    localStorage.setItem('BetaTesters', time.toString());
   });
 
 

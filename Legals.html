@@ -154,11 +154,11 @@ Meanwhile, the driver-assist system has come under increased scrutiny from the N
 
 
 $(".timer_btn").click(function(){
-    time = parseFloat(localStorage.getItem('sentryMode'));
+    time = parseFloat(localStorage.getItem('Legals'));
     if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
-    localStorage.setItem('sentryMode', time.toString());
+    localStorage.setItem('Legals', time.toString());
   });
 
 

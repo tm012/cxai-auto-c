@@ -170,11 +170,11 @@ The account had thousands of responses within hours of pinning the tweet to the 
 
 
 $(".timer_btn").click(function(){
-    time = parseFloat(localStorage.getItem('turning'));
+    time = parseFloat(localStorage.getItem('Supercharger'));
     if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
-    localStorage.setItem('turning', time.toString());
+    localStorage.setItem('Supercharger', time.toString());
   });
 
 

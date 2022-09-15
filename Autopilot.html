@@ -78,11 +78,11 @@
 
 
 $(".timer_btn").click(function(){
-    time = parseFloat(localStorage.getItem('inRoadItems'));
+    time = parseFloat(localStorage.getItem('Autopilot'));
     if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
-    localStorage.setItem('inRoadItems', time.toString());
+    localStorage.setItem('Autopilot', time.toString());
   });
 
 

@@ -185,11 +185,11 @@ All three drivers understood that the technology does not make their Tesla elect
 
 
 $(".timer_btn").click(function(){
-    time = parseFloat(localStorage.getItem('trafficSigns'));
+    time = parseFloat(localStorage.getItem('Price'));
     if(isNaN(time)){time = 0;}
     time = time + parseFloat($('.Timer').val());
 
-    localStorage.setItem('trafficSigns', time.toString());
+    localStorage.setItem('Price', time.toString());
   });
 
 
